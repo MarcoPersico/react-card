@@ -28,33 +28,42 @@ export default class App extends React.Component {
     this.setState({ isLoading: true });
     setTimeout(() => {
       this.ApiService.getEvents()
-      .then((res) => {
-        this.setState({ cardData: res.data});
-      })
-      .catch((err) => {
-        this.setState({
-          error: {
-            status: true,
-            message: err.message
-          }
-        });
-      })
-      .finally(() => {
-        this.setState({ isLoading: false })
-      })
+        .then((res) => {
+          this.setState({ cardData: res.data });
+        })
+        .catch((err) => {
+          this.setState({
+            error: {
+              status: true,
+              message: err.message
+            }
+          });
+        })
+        .finally(() => {
+          this.setState({ isLoading: false })
+        })
     }, 2500)
   }
 
   renderPlaceholder() {
-      for (let i=0; i < this.state.cardData+1; i++) {
-        return <Card />
-      }
+    for (let i = 0; i < this.state.cardData + 1; i++) {
+      return <Card />
+    }
   }
 
   renderCrap() {
     return (
       this.state.cardData.map((item, index) => {
-        return <Card key={index}><p>{item.nombre}</p></Card>
+        const desc = item.cardDesc.split(' ').splice(0,40).join(' ');
+        return (
+          <Card key={index}>
+            <img src={item.cardThumbnail} width='100%' height='auto' />
+            <h1>{item.cardName}</h1>
+            <div className='desc'>
+              <p>{desc}</p>
+            </div>
+          </Card>
+        );
       })
     );
   }
@@ -62,7 +71,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='app'>
-        {this.state.isLoading ? this.renderPlaceholder(): this.renderCrap()}
+        {this.state.isLoading ? this.renderPlaceholder() : this.renderCrap()}
       </div>
     );
   }

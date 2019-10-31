@@ -5,7 +5,14 @@
     background-color: rgb(255, 255, 255);
     min-width: 200px;
     min-height: 400px;
-    border: 1px solid rgba(199, 199, 199, 0.522);
+    border: 1px solid rgba(200, 200, 200, 0.500);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.150);
+    text-overflow: ellipsis;
+
+    & .desc {
+        width: 200px;
+        text-overflow: ellipsis;
+    }
 }
 
 @keyframes fadeIn {
