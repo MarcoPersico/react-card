@@ -1,0 +1,39 @@
+.app {
+  padding: 50px 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.app_cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.simple-button {
+  button {
+    cursor: pointer;
+    border: 1.5px solid;
+    background: rgb(255, 255, 255);
+    border-color: rgb(46, 46, 46);
+    width: 140px;
+    height: 100%;
+    transition: all ease 0.25s;
+    border-radius: 5px;
+
+    &:hover {
+      background: rgb(46, 46, 46);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.modal-custom {
+  background-color: #ffffff;
+  width: 500px;
+  height: 200px;
+
+  @media screen and (max-width: 500px) {
+    width: 450px;
+  }
+}

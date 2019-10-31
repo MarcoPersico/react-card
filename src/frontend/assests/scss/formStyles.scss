@@ -1,0 +1,169 @@
+.driSports_loginForm {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+
+  &_error {
+    color: #ce2424;
+    text-align: center;
+  }
+
+  &_wrapper {
+    display: grid;
+    align-content: center;
+    height: 100%;
+    padding: 0 45px;
+  }
+
+  &_form {
+    display: grid;
+    grid-template-rows: 70px 80px 80px 80px;
+    grid-row-gap: 35px;
+  }
+
+  &_formFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  &_formFooter {
+    div:last-of-type {
+      justify-self: end;
+    }
+  }
+
+  &_formTitle {
+    font-size: 2.5rem;
+  }
+
+  &_input {
+    button {
+      outline: none !important;
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input {
+      outline: none;
+      margin: 0;
+      border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      width: 100%;
+      font-family: inherit;
+
+      &:focus {
+        border-color: transparent !important;
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      &[type="number"]::-webkit-inner-spin-button,
+      &[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
+
+      &:focus {
+        &:-webkit-input-placeholder {
+          color: transparent;
+        }
+        &:-moz-placeholder {
+          color: transparent;
+        }
+        &::-moz-placeholder {
+          color: transparent;
+        }
+        &:-ms-input-placeholder {
+          color: transparent;
+        }
+        &::-webkit-input-placeholder {
+          color: #cccccc;
+        }
+        &:-moz-placeholder {
+          color: #cccccc;
+        }
+        &::-moz-placeholder {
+          color: #cccccc;
+        }
+        &:-ms-input-placeholder {
+          color: #cccccc;
+        }
+      }
+    }
+
+    &_inputContainer {
+      position: relative;
+      border-bottom: 2px solid #cccccc;
+    }
+
+    &_formSpan {
+      font-weight: bold;
+      font-size: 18px;
+      color: #999999;
+      line-height: 1.2;
+      padding-left: 2px;
+    }
+
+    &_inputFocus {
+      display: block;
+      width: 100%;
+      height: 50px;
+      border: none;
+      background: transparent;
+      font-weight: 100;
+      font-size: 22px;
+      color: #555555;
+      line-height: 1.2;
+      padding: 0 2px;
+    }
+
+    &_inputBottom {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+
+        background: #ffffff;
+        background: -webkit-linear-gradient(45deg, #0d1881, #33b393);
+        background: -o-linear-gradient(45deg, #0d1881, #33b393);
+        background: -moz-linear-gradient(45deg, #0d1881, #33b393);
+        background: linear-gradient(45deg, #0d1881, #33b393);
+      }
+    }
+
+    &_inputFocus:focus + &_inputBottom::before {
+      width: 100%;
+    }
+
+    .has-val &_inputFocus + &_inputBottom::before {
+      width: 100%;
+    }
+  }
+}

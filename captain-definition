@@ -1,0 +1,17 @@
+{
+    "schemaVersion" :1 ,
+    "dockerfileLines" :[
+        "FROM node:8.11.3",
+        "RUN apt-get update",
+        "RUN apt-get install -y git",
+        "RUN apt-get install nasm",                        
+        "RUN mkdir -p /usr/src/app",
+        "WORKDIR /usr/src/app",
+        "COPY ./src /usr/src/app",
+        "RUN chmod -R 777 /usr/src/app",
+        "RUN npm install",                        
+        "ENV PORT 80",
+        "EXPOSE 80",
+        "CMD [ \"npm\", \"run\", \"start\" ]"
+    ]
+}

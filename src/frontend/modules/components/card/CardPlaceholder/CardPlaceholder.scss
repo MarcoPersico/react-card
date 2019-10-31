@@ -1,0 +1,77 @@
+.card-placeholder {
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+  min-width: 200px;
+  min-height: 200px;
+  border: 1px solid rgba(199, 199, 199, 0.522);
+  display: grid;
+  gap: 20px;
+
+  &_thumbnail {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+  }
+
+  &_bar {
+    height: 20px;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+
+    &.short {
+      width: 80%;
+      animation-delay: 1400;      
+
+    }
+
+    &.medium {
+      width: 90%;
+    }
+  }
+
+  &_barSecondary {
+    border-radius: 5px;
+    height: 100%;
+    animation-duration: 1500ms;
+    animation-name: secondaryBar;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#f1f1f1', GradientType=1 );
+    background: #e4e4e4;
+    background: -moz-linear-gradient(left, #f1f1f1 0%, #dddddd 50% 25%, #dddddd 50% 50%, #dddddd 50% 75%, #f1f1f1 100%);
+    background: -webkit-gradient(
+      left top,
+      right top,
+      #f1f1f1 0%,
+      #dddddd 50% 25%,
+      #dddddd 50% 50%,
+      #dddddd 50% 75%,
+      #f1f1f1 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      #f1f1f1 0%,
+      #dddddd 50% 25%,
+      #dddddd 50% 50%,
+      #dddddd 50% 75%,
+      #f1f1f1 100%
+    );
+    background: -o-linear-gradient(left, #f1f1f1 0%, #dddddd 50% 25%, #dddddd 50% 50%, #dddddd 50% 75%, #f1f1f1 100%);
+    background: -ms-linear-gradient(left, #f1f1f1 0%, #dddddd 50% 25%, #dddddd 50% 50%, #dddddd 50% 75%, #f1f1f1 100%);
+    background: linear-gradient(to right, #f1f1f1 0%, #dddddd 50% 25%, #dddddd 50% 50%, #dddddd 50% 75%, #f1f1f1 100%);
+  }
+}
+
+@keyframes secondaryBar {
+  from {
+    margin-left: 0%;
+    width: 30%;
+  }
+
+  to {
+    margin-left: 70%;
+    width: 30%;
+  }
+}

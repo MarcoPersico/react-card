@@ -1,0 +1,57 @@
+{
+  "name": "react-modal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "projext-runner gateway --production",
+    "start:local": "CONFIG=local projext-runner gateway",
+    "start:frontend": "CONFIG=local projext run frontend --type production",
+    "build:production": "projext build frontend --type production",
+    "build:development": "projext build frontend --type development",
+    "build:development:local": "CONFIG=local projext build frontend",
+    "lint": "eslint . --ext .js",
+    "clean": "projext clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.18.0",
+    "connected-react-router": "4.4.1",
+    "copy-webpack-plugin": "4.5.2",
+    "express": "4.16.3",
+    "form-data": "^2.5.0",
+    "he": "1.1.1",
+    "history": "4.7.2",
+    "jimpex": "2.1.1",
+    "normalize.css": "8.0.0",
+    "projext": "4.0.0",
+    "projext-plugin-runner": "5.0.4",
+    "projext-plugin-webpack": "5.1.0",
+    "projext-plugin-webpack-react": "3.0.0",
+    "prop-types": "15.6.1",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "react-html-parser": "^2.0.2",
+    "urijs": "1.17.1",
+    "url-loader": "1.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.1",
+    "colors": "1.2.1",
+    "esdoc": "1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "1.0.0",
+    "esdoc-jsx-plugin": "1.0.0",
+    "esdoc-standard-plugin": "1.0.0",
+    "eslint": "4.9.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.7.0"
+  },
+  "engines": {
+    "node": ">= 8.9.2"
+  }
+}
